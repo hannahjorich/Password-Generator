@@ -1,4 +1,3 @@
-
 // set user confirm variables
 var enter;
 var confirmNumber;
@@ -11,7 +10,7 @@ character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // Alphabetical characters
 alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
+//this variable declares the if statements 
 var choices;
 // converts letters to uppercase 
 var toUpper = function (x) {
