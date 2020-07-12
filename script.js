@@ -1,17 +1,24 @@
-// Assignment Code
-var numString = "0123456789";
-var numArray = numString.split("");
-console.log(numArray); 
-// console.log after ever variable so you can see if the array is working
-var charString = "!#$%&\()*+,-./:;<=>?@^[\\]^_`{|}~;";
-var charArray = charString.split("");
-console.log(charString);
-var abcUpperString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var abcUpperArray = abcUpperString.split("");
-console.log(abcUpperString);
-var abcLowerString = "abcdefghijklmnopqrstuvwxyz";
-var abcLowerArray = abcLowerString.split("");
-console.log(abcLowerString);
+
+// set user confirm variables
+var enter;
+var confirmNumber;
+var confirmCharacter;
+var confirmUppercase;
+var confirmLowercase;
+// assign variables
+character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+// Numeric characters
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// Alphabetical characters
+alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+var choices;
+// converts letters to uppercase 
+var toUpper = function (x) {
+    return x.toUpperCase();
+};
+// creates a variable for uppercase conversion
+alpha2 = alpha.map(toUpper);
 
 var get = document.querySelector("#generate");
 
@@ -23,11 +30,18 @@ get.addEventListener("click", function () {
 // ask user for password length, set to variable prompt
 var passwordlength = prompt("How many character would you like your password? Choose between 8 to 128 charcters");
 
-// use true and false prompts to see num, up, lower, char, 
+// first if statment = this much be true 
+if(passwordlength < 8 || passwordlength > 128){
+  var passwordlength= prompt("you must choose between 8 and 128");
 
-// write an if statement for password length 
+} else {
+  confirmNumber = confirm("Will this contain numbers?");
+  confirmCharacter = confirm("Will this contain special characters?");
+  confirmUppercase = confirm("Will this contain Uppercase letters?");
+  confirmLowercase = confirm("Will this contain Lowercase letters?");
+};
 
-// generate a character list before for loop 
+// generate a character if 
 
 // do a for loop for the passwordlength - max in the password length 
 
