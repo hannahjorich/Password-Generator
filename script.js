@@ -22,16 +22,17 @@ alpha2 = alpha.map(toUpper);
 var get = document.querySelector("#generate");
 
 get.addEventListener("click", function () {
-    ps = generatePassword();
-    document.getElementById("password").placeholder = ps;
+  ps = generatePassword();
+  document.getElementById("password").placeholder = ps;
 });
-
+// Start function to generate password
+function generatePassword() {
 // ask user for password length, set to variable prompt
-var passwordlength = prompt("How many character would you like your password? Choose between 8 to 128 charcters");
+passwordlength = prompt("How many character would you like your password? Choose between 8 to 128 charcters");
 
 // first if statment = this much be true 
 if(passwordlength < 8 || passwordlength > 128){
-  var passwordlength= prompt("you must choose between 8 and 128");
+   passwordlength= prompt("you must choose between 8 and 128");
 
 } else {
   confirmNumber = confirm("Will this contain numbers?");
@@ -40,26 +41,14 @@ if(passwordlength < 8 || passwordlength > 128){
   confirmLowercase = confirm("Will this contain Lowercase letters?");
 };
 
-// generate a character if 
+  // if all confirms are false
+  if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
+      choices = alert("You must choose a criteria!");
 
-// do a for loop for the passwordlength - max in the password length 
+  }
+  // else if all are true
+  else if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
 
-// inside that for loop you are generating random characters - push them into an array or string
-
-//if the user accepts char type add that char type to one lagrge array - if statements
-
-// var index = Math.floor(Math.random * array.length) - for loop(over passwordlength)
-
-// array[index]
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.innerHTML = password;
-
+      choices = character.concat(number, alpha, alpha2);
+  }
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
