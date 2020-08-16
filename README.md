@@ -36,15 +36,9 @@ The following image demonstrates the application functionality:
 
 ![password generator demo](./Assets/03-javascript-homework-demo.png)
 
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
+## Links
 
 https://hannahjorich.github.io/Password-Generator/ 
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
 https://github.com/hannahjorich/Password-Generator
 - - -
