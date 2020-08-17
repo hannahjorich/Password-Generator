@@ -13,6 +13,11 @@ SO THAT I can create a strong password that provides greater security
 
 ![password generator demo](./Assets/03-javascript-homework-demo.png)
 
+## Resources
+HTML,
+CSS, 
+JavaScript
+
 ## Links
 
 https://hannahjorich.github.io/Password-Generator/ 
